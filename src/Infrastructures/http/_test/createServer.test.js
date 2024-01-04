@@ -15,21 +15,21 @@ describe('HTTP server', () => {
     expect(response.statusCode).toEqual(404);
   });
 
-// describe('when GET /', () => {
-//   it('should return welcome message', async () => {
+ describe('when GET /', () => {
+   it('should return welcome message', async () => {
       // Arrange
-//     const server = await createServer({});
+     const server = await createServer({});
       // Action
-//      const response = await server.inject({
-//        method: 'GET',
-//        url: '/',
-//      });
+      const response = await server.inject({
+        method: 'GET',
+        url: '/',
+      });
       // Assert
-//      const responseJson = JSON.parse(response.payload);
-//      expect(response.statusCode).toEqual(200);
-//      expect(responseJson.value).toEqual('Hello World!');
-//     });
-//   });
+      const responseJson = JSON.parse(response.payload);
+      expect(response.statusCode).toEqual(200);
+      expect(responseJson.value).toEqual('Hello World!');
+     });
+   });
 
 
   it('should handle server error correctly', async () => {
